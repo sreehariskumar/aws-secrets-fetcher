@@ -6,9 +6,9 @@ your_password_key=replace_here
 
 # Detect the OS
 if [[ "$(uname -s)" == "Linux" ]]; then
-  if [[ -f /etc/lsb-release ]]; then
+  if grep -q "Ubuntu" /etc/os-release; then
     OS="ubuntu"
-  elif [[ -f /etc/redhat-release ]]; then
+  elif grep -q "CentOS" /etc/os-release; then
     OS="centos"
   else
     echo "Unsupported Linux distribution"

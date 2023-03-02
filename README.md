@@ -1,5 +1,13 @@
 # aws-secrets-fetcher
 
+
+```s
+git clone https://github.com/sreehariskumar/aws-secrets-fetcher.git
+cd aws-secrets-fetcher/
+chmod +x aws-secrets-fetcher.sh
+./aws-secrets-fetcher.sh
+```
+
 This script does the following tasks:
 
 - It sets three variables: your_secret_name, your_secret_region, and your_password_key, which should be replaced with actual values.

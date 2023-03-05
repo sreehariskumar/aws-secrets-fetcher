@@ -25,4 +25,6 @@ _If the script is running on a Linux system, the **if** statement checks if the 
 
 - It fetches a secret from the **AWS Secrets Manager** by calling the **aws secretsmanager get-secret-value** command with the **--secret-id** and **--region** options set to the values of the **your_secret_name** and **your_secret_region** variables, respectively. It then pipes the output through several commands to filter out the desired password value from the JSON response.
 
+_Follow this [document](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) to configure AWS CLI._
+
 _Note that in order to use this script, you will need to replace the placeholder values for the **your_secret_name**, **your_secret_region**, and **your_password_key** variables with the actual values for your AWS Secrets Manager secret._

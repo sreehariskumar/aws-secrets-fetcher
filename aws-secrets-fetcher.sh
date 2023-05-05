@@ -29,9 +29,9 @@ elif [[ "$OS" == "centos" ]]; then
 fi
 
 # Install AWS CLI tool
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
+# curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# unzip awscliv2.zip
+# sudo ./aws/install
 
 # Fetch and filter the secret
 aws secretsmanager get-secret-value --secret-id $your_secret_name --region $your_secret_region | jq ".SecretString" | sed 's/[\]//g' | sed 's/.//' | sed  's/.$//' | jq ".$your_password_key" | sed 's/"//g'
